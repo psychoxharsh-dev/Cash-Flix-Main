@@ -419,3 +419,151 @@ footer {
 <div class="mobile-menu" id="mobileMenu">
   <div class="menu-header">
     <div class="logo"><span class="name">CashFlix</span><span class="bolt"><svg><use href="#i-bolt"/></svg></span></div>
+    <button class="menu-close" onclick="closeMenu()"><svg><use href="#i-close"/></svg></button>
+  </div>
+  <div class="menu-label">MAIN MENU</div>
+  <a href="#hero" class="menu-item" onclick="closeMenu()"><svg><use href="#i-home"/></svg> Home</a>
+  <a href="#offers" class="menu-item" onclick="closeMenu()"><svg><use href="#i-gift"/></svg> Live Offers</a>
+  <a href="#workflow" class="menu-item" onclick="closeMenu()"><svg><use href="#i-help"/></svg> How it Works</a>
+  <a href="#reviews" class="menu-item" onclick="closeMenu()"><svg><use href="#i-star"/></svg> Reviews</a>
+  <div style="margin-top:auto">
+    <div class="stay-box">
+      <div class="tag">STAY UPDATED</div>
+      <p>Join 5,000+ members in our official Telegram for flash offers & payment proof!</p>
+    </div>
+    <a href="https://t.me/+0Z6zL57TAHxiYjU1" target="_blank" class="menu-tg"><svg><use href="#i-telegram"/></svg> Join Telegram</a>
+  </div>
+</div>
+
+<!-- HERO -->
+<div class="hero" id="hero">
+  <canvas id="snowCanvas"></canvas>
+  <div class="trust-pill"><div class="dot"></div> Trusted by 10,000+ Users</div>
+  <h1>India's<br><span class="gradient" id="typeText"></span><span class="type-cursor" id="typeCursor">|</span><br>Performance<br>Marketing<br>Network</h1>
+  <p>Monetize traffic with high paying CPA, CPI, CPL & CPR campaigns across fintech, gaming, ecommerce and apps. Experience the future of affiliate marketing.</p>
+  <div class="hero-btns">
+    <a href="#offers" class="btn-primary">Explore Offers <svg><use href="#i-arrow"/></svg></a>
+    <a href="https://t.me/+0Z6zL57TAHxiYjU1" target="_blank" class="btn-secondary"><svg><use href="#i-telegram"/></svg> Join Telegram</a>
+  </div>
+
+  <div class="earnings-card">
+    <div class="live-label"><div class="live-dot"></div> LIVE EARNINGS</div>
+    <div class="earn-amount" id="earnAmount">₹1,24,500</div>
+    <div class="chart-wrap">
+      <svg id="liveChart" viewBox="0 0 300 56" preserveAspectRatio="none">
+        <defs>
+          <linearGradient id="cg" x1="0" y1="0" x2="1" y2="0">
+            <stop offset="0%" stop-color="#3b82f6"/>
+            <stop offset="100%" stop-color="#22d3ee"/>
+          </linearGradient>
+          <linearGradient id="cgFill" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0%" stop-color="#22d3ee" stop-opacity="0.25"/>
+            <stop offset="100%" stop-color="#22d3ee" stop-opacity="0"/>
+          </linearGradient>
+        </defs>
+        <polygon id="chartArea" points="" fill="url(#cgFill)"/>
+        <polyline id="chartLine" points="" fill="none" stroke="url(#cg)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+        <circle id="chartDot" r="3.5" fill="#22d3ee"/>
+      </svg>
+    </div>
+    <div class="earn-grid">
+      <div class="earn-box">
+        <div class="lbl">Today</div>
+        <div class="val" id="todayVal">+₹12,450</div>
+      </div>
+      <div class="earn-box">
+        <div class="lbl">Conversions</div>
+        <div class="val" id="convVal" style="color:var(--text)">847</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="divider"></div>
+
+<!-- WORKFLOW -->
+<div class="section" id="workflow">
+  <div class="sec-title">Simple Workflow</div>
+  <div class="sec-sub">Skip the complexity. Follow 3 easy steps to start getting paid directly via UPI.</div>
+  <div class="wf-steps">
+    <div class="wf-step">
+      <div class="wf-icon"><svg><use href="#i-target"/></svg><div class="wf-num">1</div></div>
+      <div class="wf-text">
+        <h3>Pick an Offer</h3>
+        <p>Pick from hundreds of high paying campaigns available instantly.</p>
+      </div>
+    </div>
+    <div class="wf-step">
+      <div class="wf-icon"><svg><use href="#i-check"/></svg><div class="wf-num">2</div></div>
+      <div class="wf-text">
+        <h3>Task Verification</h3>
+        <p>Follow the steps to complete the task. Our tracking system auto-verifies your completion.</p>
+      </div>
+    </div>
+    <div class="wf-step">
+      <div class="wf-icon"><svg><use href="#i-cash"/></svg><div class="wf-num">3</div></div>
+      <div class="wf-text">
+        <h3>Direct Cash</h3>
+        <p>No coins, no wallets. Money is transferred directly to your bank account via UPI.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="divider"></div>
+
+<!-- OFFERS -->
+<div class="section" id="offers">
+  <div class="pill-badge"><svg><use href="#i-bolt"/></svg> VERIFIED HIGH EPC STACK</div>
+  <div class="camp-title">Live<br><span style="color:var(--blue)">Campaigns.</span></div>
+  <div class="camp-sub">Choose from our top performing campaigns. High conversion rates and instant verification guaranteed.</div>
+  <div class="joining-row">
+    <div class="avatars">
+      <div class="av"><svg><use href="#i-user"/></svg></div><div class="av"><svg><use href="#i-user"/></svg></div><div class="av"><svg><use href="#i-user"/></svg></div><div class="av"><svg><use href="#i-user"/></svg></div>
+    </div>
+    <span>+1.2K joining today</span>
+  </div>
+  <div class="camp-card">
+    <div class="cc-top">
+      <div class="cc-icon"><svg><use href="#i-tv"/></svg></div>
+      <div class="cc-right">
+        <div class="cc-stars">
+          <svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg>
+        </div>
+        <div class="cc-plbl">PAYOUT</div>
+        <div class="cc-pval">₹30</div>
+      </div>
+    </div>
+    <div class="cc-name">Story Tv 2</div>
+    <div class="cc-tag"><svg><use href="#i-bolt"/></svg> TRAIL PURCHASE</div>
+    <a href="https://fantastic-begonia-4a68e0.netlify.app" target="_blank" class="cc-btn">START CAMPAIGN <svg><use href="#i-arrow"/></svg></a>
+  </div>
+</div>
+
+<div class="divider"></div>
+
+<!-- REVIEWS -->
+<div class="section" id="reviews">
+  <div class="sec-title">What Our <span style="color:var(--blue)">Earners</span> Say</div>
+  <div class="sec-sub">Join thousands of happy users who earn daily with CashFlix.</div>
+
+  <div class="rev-card">
+    <div class="rev-stars"><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg></div>
+    <div class="rev-text">"Best platform for quick pocket money. The UPI transfer happens almost immediately after task verification. Highly recommended!"</div>
+    <div class="rev-user">
+      <div class="rev-av"><svg><use href="#i-user"/></svg></div>
+      <div><div class="rev-name">Rahul Sharma</div><div class="rev-role">PUBLISHER</div></div>
+    </div>
+  </div>
+
+  <div class="rev-card">
+    <div class="rev-stars"><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg></div>
+    <div class="rev-text">"I've tried many apps, but CashFlix is superior because there's no withdrawal process. Money goes straight to the bank!"</div>
+    <div class="rev-user">
+      <div class="rev-av"><svg><use href="#i-user"/></svg></div>
+      <div><div class="rev-name">Priya Singh</div><div class="rev-role">EXPERT EARNER</div></div>
+    </div>
+  </div>
+
+  <div class="rev-card">
+    <div class="rev-stars"><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg></div>
