@@ -648,19 +648,36 @@ footer {
 (function(){
   const el = document.getElementById('typeText');
   const cursor = document.getElementById('typeCursor');
-  const text = 'Highest Paying';
-  let i = 0;
+  const phrases = ['Fastest Growing', 'Highest Paying', 'Most Trusted'];
+  let phraseIndex = 0;
+  let charIndex = 0;
+  let deleting = false;
 
-  function type(){
-    if (i <= text.length){
-      el.textContent = text.slice(0, i);
-      i++;
-      setTimeout(type, 65);
+  function tick(){
+    const current = phrases[phraseIndex];
+
+    if (!deleting){
+      charIndex++;
+      el.textContent = current.slice(0, charIndex);
+      if (charIndex === current.length){
+        deleting = true;
+        setTimeout(tick, 1200);
+        return;
+      }
+      setTimeout(tick, 65);
     } else {
-      setTimeout(() => { cursor.style.display = 'none'; }, 1200);
+      charIndex--;
+      el.textContent = current.slice(0, charIndex);
+      if (charIndex === 0){
+        deleting = false;
+        phraseIndex = (phraseIndex + 1) % phrases.length;
+        setTimeout(tick, 400);
+        return;
+      }
+      setTimeout(tick, 35);
     }
   }
-  window.addEventListener('load', () => setTimeout(type, 400));
+  window.addEventListener('load', () => setTimeout(tick, 400));
 })();
 
 function openMenu(){document.getElementById('mobileMenu').classList.add('open');document.getElementById('overlay').classList.add('open');}
