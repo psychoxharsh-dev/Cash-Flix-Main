@@ -647,7 +647,6 @@ footer {
 <script>
 (function(){
   const el = document.getElementById('typeText');
-  const cursor = document.getElementById('typeCursor');
   const phrases = ['Fastest Growing', 'Highest Paying', 'Most Trusted'];
   let phraseIndex = 0;
   let charIndex = 0;
@@ -677,7 +676,7 @@ footer {
       setTimeout(tick, 35);
     }
   }
-  window.addEventListener('load', () => setTimeout(tick, 400));
+  tick();
 })();
 
 function openMenu(){document.getElementById('mobileMenu').classList.add('open');document.getElementById('overlay').classList.add('open');}
