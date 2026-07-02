@@ -399,4 +399,382 @@ footer {
     <symbol id="i-tv" viewBox="0 0 24 24"><rect x="2" y="5" width="20" height="14" rx="2" fill="none" stroke="currentColor" stroke-width="2"/><path fill="currentColor" d="M10 9l5 3-5 3z"/></symbol>
     <symbol id="i-arrow" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M5 12h14M13 6l6 6-6 6"/></symbol>
     <symbol id="i-user" viewBox="0 0 24 24"><circle cx="12" cy="8" r="4" fill="currentColor"/><path fill="currentColor" d="M4 21c0-4.4 3.6-7 8-7s8 2.6 8 7z"/></symbol>
-    <symbol id="i-telegram" viewBox="0 0 24 24"><path fill="currentColor" d="M21.
+    <symbol id="i-telegram" viewBox="0 0 24 24"><path fill="currentColor" d="M21.9 4.3l-3.3 15.6c-.2 1.1-.9 1.4-1.8.9l-4.9-3.6-2.4 2.3c-.3.3-.5.5-1 .5l.3-5 9.1-8.2c.4-.4-.1-.6-.6-.2L6.3 13.6l-4.8-1.5c-1-.3-1-1 .2-1.5l18.8-7.2c.9-.3 1.6.2 1.4 1z"/></symbol>
+    <symbol id="i-instagram" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="5" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="17.5" cy="6.5" r="1.3" fill="currentColor"/></symbol>
+    <symbol id="i-youtube" viewBox="0 0 24 24"><rect x="2" y="5" width="20" height="14" rx="4" fill="none" stroke="currentColor" stroke-width="2"/><path fill="currentColor" d="M10 9l5 3-5 3z"/></symbol>
+    <symbol id="i-lock" viewBox="0 0 24 24"><rect x="4" y="10" width="16" height="11" rx="2" fill="none" stroke="currentColor" stroke-width="2"/><path fill="none" stroke="currentColor" stroke-width="2" d="M8 10V7a4 4 0 018 0v3"/></symbol>
+  </defs>
+</svg>
+
+<!-- NAV -->
+<nav>
+  <div class="logo">
+    <span class="name">CashFlix</span>
+    <span class="bolt"><svg><use href="#i-bolt"/></svg></span>
+  </div>
+  <button class="menu-btn" onclick="openMenu()"><svg><use href="#i-menu"/></svg></button>
+</nav>
+
+<!-- OVERLAY -->
+<div class="overlay" id="overlay" onclick="closeMenu()"></div>
+
+<!-- MOBILE MENU -->
+<div class="mobile-menu" id="mobileMenu">
+  <div class="menu-header">
+    <div class="logo"><span class="name">CashFlix</span><span class="bolt"><svg><use href="#i-bolt"/></svg></span></div>
+    <button class="menu-close" onclick="closeMenu()"><svg><use href="#i-close"/></svg></button>
+  </div>
+  <div class="menu-label">MAIN MENU</div>
+  <a href="#hero" class="menu-item" onclick="closeMenu()"><svg><use href="#i-home"/></svg> Home</a>
+  <a href="#offers" class="menu-item" onclick="closeMenu()"><svg><use href="#i-gift"/></svg> Live Offers</a>
+  <a href="#workflow" class="menu-item" onclick="closeMenu()"><svg><use href="#i-help"/></svg> How it Works</a>
+  <a href="#reviews" class="menu-item" onclick="closeMenu()"><svg><use href="#i-star"/></svg> Reviews</a>
+  <div style="margin-top:auto">
+    <div class="stay-box">
+      <div class="tag">STAY UPDATED</div>
+      <p>Join 5,000+ members in our official Telegram for flash offers & payment proof!</p>
+    </div>
+    <a href="https://t.me/+0Z6zL57TAHxiYjU1" target="_blank" class="menu-tg"><svg><use href="#i-telegram"/></svg> Join Telegram</a>
+  </div>
+</div>
+
+<!-- HERO -->
+<div class="hero" id="hero">
+  <canvas id="snowCanvas"></canvas>
+  <div class="trust-pill"><div class="dot"></div> Trusted by 10,000+ Users</div>
+  <h1>India's<br><span class="gradient" id="typeText"></span><span class="type-cursor" id="typeCursor">|</span><br>Performance<br>Marketing<br>Network</h1>
+  <p>Monetize traffic with high paying CPA, CPI, CPL & CPR campaigns across fintech, gaming, ecommerce and apps. Experience the future of affiliate marketing.</p>
+  <div class="hero-btns">
+    <a href="#offers" class="btn-primary">Explore Offers <svg><use href="#i-arrow"/></svg></a>
+    <a href="https://t.me/+0Z6zL57TAHxiYjU1" target="_blank" class="btn-secondary"><svg><use href="#i-telegram"/></svg> Join Telegram</a>
+  </div>
+
+  <div class="earnings-card">
+    <div class="live-label"><div class="live-dot"></div> LIVE EARNINGS</div>
+    <div class="earn-amount" id="earnAmount">₹1,24,500</div>
+    <div class="chart-wrap">
+      <svg id="liveChart" viewBox="0 0 300 56" preserveAspectRatio="none">
+        <defs>
+          <linearGradient id="cg" x1="0" y1="0" x2="1" y2="0">
+            <stop offset="0%" stop-color="#3b82f6"/>
+            <stop offset="100%" stop-color="#22d3ee"/>
+          </linearGradient>
+          <linearGradient id="cgFill" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0%" stop-color="#22d3ee" stop-opacity="0.25"/>
+            <stop offset="100%" stop-color="#22d3ee" stop-opacity="0"/>
+          </linearGradient>
+        </defs>
+        <polygon id="chartArea" points="" fill="url(#cgFill)"/>
+        <polyline id="chartLine" points="" fill="none" stroke="url(#cg)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+        <circle id="chartDot" r="3.5" fill="#22d3ee"/>
+      </svg>
+    </div>
+    <div class="earn-grid">
+      <div class="earn-box">
+        <div class="lbl">Today</div>
+        <div class="val" id="todayVal">+₹12,450</div>
+      </div>
+      <div class="earn-box">
+        <div class="lbl">Conversions</div>
+        <div class="val" id="convVal" style="color:var(--text)">847</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="divider"></div>
+
+<!-- WORKFLOW -->
+<div class="section" id="workflow">
+  <div class="sec-title">Simple Workflow</div>
+  <div class="sec-sub">Skip the complexity. Follow 3 easy steps to start getting paid directly via UPI.</div>
+  <div class="wf-steps">
+    <div class="wf-step">
+      <div class="wf-icon"><svg><use href="#i-target"/></svg><div class="wf-num">1</div></div>
+      <div class="wf-text">
+        <h3>Pick an Offer</h3>
+        <p>Pick from hundreds of high paying campaigns available instantly.</p>
+      </div>
+    </div>
+    <div class="wf-step">
+      <div class="wf-icon"><svg><use href="#i-check"/></svg><div class="wf-num">2</div></div>
+      <div class="wf-text">
+        <h3>Task Verification</h3>
+        <p>Follow the steps to complete the task. Our tracking system auto-verifies your completion.</p>
+      </div>
+    </div>
+    <div class="wf-step">
+      <div class="wf-icon"><svg><use href="#i-cash"/></svg><div class="wf-num">3</div></div>
+      <div class="wf-text">
+        <h3>Direct Cash</h3>
+        <p>No coins, no wallets. Money is transferred directly to your bank account via UPI.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="divider"></div>
+
+<!-- OFFERS -->
+<div class="section" id="offers">
+  <div class="pill-badge"><svg><use href="#i-bolt"/></svg> VERIFIED HIGH EPC STACK</div>
+  <div class="camp-title">Live<br><span style="color:var(--blue)">Campaigns.</span></div>
+  <div class="camp-sub">Choose from our top performing campaigns. High conversion rates and instant verification guaranteed.</div>
+  <div class="joining-row">
+    <div class="avatars">
+      <div class="av"><svg><use href="#i-user"/></svg></div><div class="av"><svg><use href="#i-user"/></svg></div><div class="av"><svg><use href="#i-user"/></svg></div><div class="av"><svg><use href="#i-user"/></svg></div>
+    </div>
+    <span>+1.2K joining today</span>
+  </div>
+  <div class="camp-card">
+    <div class="cc-top">
+      <div class="cc-icon"><svg><use href="#i-tv"/></svg></div>
+      <div class="cc-right">
+        <div class="cc-stars">
+          <svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg>
+        </div>
+        <div class="cc-plbl">PAYOUT</div>
+        <div class="cc-pval">₹30</div>
+      </div>
+    </div>
+    <div class="cc-name">Story Tv 2</div>
+    <div class="cc-tag"><svg><use href="#i-bolt"/></svg> TRAIL PURCHASE</div>
+    <a href="https://fantastic-begonia-4a68e0.netlify.app" target="_blank" class="cc-btn">START CAMPAIGN <svg><use href="#i-arrow"/></svg></a>
+  </div>
+</div>
+
+<div class="divider"></div>
+
+<!-- REVIEWS -->
+<div class="section" id="reviews">
+  <div class="sec-title">What Our <span style="color:var(--blue)">Earners</span> Say</div>
+  <div class="sec-sub">Join thousands of happy users who earn daily with CashFlix.</div>
+
+  <div class="rev-card">
+    <div class="rev-stars"><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg></div>
+    <div class="rev-text">"Best platform for quick pocket money. The UPI transfer happens almost immediately after task verification. Highly recommended!"</div>
+    <div class="rev-user">
+      <div class="rev-av"><svg><use href="#i-user"/></svg></div>
+      <div><div class="rev-name">Rahul Sharma</div><div class="rev-role">PUBLISHER</div></div>
+    </div>
+  </div>
+
+  <div class="rev-card">
+    <div class="rev-stars"><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg></div>
+    <div class="rev-text">"I've tried many apps, but CashFlix is superior because there's no withdrawal process. Money goes straight to the bank!"</div>
+    <div class="rev-user">
+      <div class="rev-av"><svg><use href="#i-user"/></svg></div>
+      <div><div class="rev-name">Priya Singh</div><div class="rev-role">EXPERT EARNER</div></div>
+    </div>
+  </div>
+
+  <div class="rev-card">
+    <div class="rev-stars"><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg></div>
+    <div class="rev-text">"The tracking system is very accurate. High EPC and very transparent tracking. Great for bulk traffic."</div>
+    <div class="rev-user">
+      <div class="rev-av"><svg><use href="#i-user"/></svg></div>
+      <div><div class="rev-name">Ankit Patel</div><div class="rev-role">TOP PUBLISHER</div></div>
+    </div>
+  </div>
+</div>
+
+<div class="divider"></div>
+
+<!-- STATS -->
+<div class="section">
+  <div class="stats-card">
+    <div class="s-row">
+      <div class="s-lbl">NETWORK PAYOUTS</div>
+      <div class="s-val">₹4.82L <span class="s-badge">12.5% GROWTH</span></div>
+    </div>
+    <div class="s-row">
+      <div class="s-lbl">CONVERSION ACCURACY</div>
+      <div class="s-val" style="font-size:24px">99.98% <span style="color:var(--blue);font-size:13px;font-weight:700">Optimal</span></div>
+      <div class="prog"><div class="prog-fill" style="width:99.98%"></div></div>
+    </div>
+    <div class="s-grid">
+      <div class="s-box"><div class="lbl">AVG. EPC</div><div class="val" style="color:var(--cyan)">₹14.2</div></div>
+      <div class="s-box"><div class="lbl">DAILY HITS</div><div class="val">2.4M</div></div>
+    </div>
+    <div class="sys-row">
+      <div class="sys-lbl">SYSTEM STATUS</div>
+      <div class="sys-active">ALL NODES ACTIVE</div>
+    </div>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="ft-inner">
+    <div class="ft-logo">CashFlix <span class="bolt"><svg><use href="#i-bolt"/></svg></span></div>
+    <div class="ft-desc">India's #1 Rewards Network. Complete simple tasks and get paid directly to your bank account via UPI instantly.</div>
+    <div class="ft-socials">
+      <a href="https://t.me/+0Z6zL57TAHxiYjU1" target="_blank" class="ft-soc"><svg><use href="#i-telegram"/></svg></a>
+      <a href="#" class="ft-soc"><svg><use href="#i-instagram"/></svg></a>
+      <a href="#" class="ft-soc"><svg><use href="#i-youtube"/></svg></a>
+    </div>
+    <div class="ft-sec">
+      <div class="ft-lbl">NAVIGATION</div>
+      <div class="ft-links">
+        <a href="#offers" class="ft-link">Active Offers</a>
+        <a href="https://t.me/+0Z6zL57TAHxiYjU1" class="ft-link">Join Telegram</a>
+        <a href="#workflow" class="ft-link">How it Works</a>
+      </div>
+    </div>
+    <div class="ft-sec">
+      <div class="ft-lbl">LEGAL</div>
+      <div class="ft-links">
+        <a href="#" class="ft-link">Terms & Conditions</a>
+        <a href="#" class="ft-link">Privacy Policy</a>
+        <a href="#" class="ft-link">Refund Policy</a>
+      </div>
+    </div>
+    <div class="infra-box">
+      <div class="infra-amt">₹4,82,500+</div>
+      <div class="infra-lbl">PAID WEEKLY</div>
+      <div class="uptime-row"><span>UPTIME</span><span class="uptime-val">99.9%</span></div>
+      <div class="prog"><div class="prog-fill" style="width:99.9%"></div></div>
+    </div>
+    <div class="copyright">© 2025 - 2026 CASHFLIX NETWORK<br>ALL RIGHTS RESERVED</div>
+    <div class="ssl"><svg><use href="#i-lock"/></svg> Secure SSL Encryption Active</div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  const el = document.getElementById('typeText');
+  const cursor = document.getElementById('typeCursor');
+  const text = 'Highest Paying';
+  let i = 0;
+
+  function type(){
+    if (i <= text.length){
+      el.textContent = text.slice(0, i);
+      i++;
+      setTimeout(type, 65);
+    } else {
+      setTimeout(() => { cursor.style.display = 'none'; }, 1200);
+    }
+  }
+  window.addEventListener('load', () => setTimeout(type, 400));
+})();
+
+function openMenu(){document.getElementById('mobileMenu').classList.add('open');document.getElementById('overlay').classList.add('open');}
+function closeMenu(){document.getElementById('mobileMenu').classList.remove('open');document.getElementById('overlay').classList.remove('open');}
+
+(function(){
+  const W = 300, H = 56;
+  const POINTS = 9;
+  let data = [];
+
+  for (let i = 0; i < POINTS; i++) {
+    data.push(Math.random() * 30 + 8);
+  }
+
+  const line = document.getElementById('chartLine');
+  const area = document.getElementById('chartArea');
+  const dot  = document.getElementById('chartDot');
+
+  function render() {
+    const step = W / (POINTS - 1);
+    let pts = data.map((v, i) => `${(i*step).toFixed(1)},${(H - v).toFixed(1)}`).join(' ');
+    line.setAttribute('points', pts);
+    area.setAttribute('points', `0,${H} ${pts} ${W},${H}`);
+    const lastX = (POINTS - 1) * step;
+    const lastY = H - data[data.length - 1];
+    dot.setAttribute('cx', lastX.toFixed(1));
+    dot.setAttribute('cy', lastY.toFixed(1));
+  }
+
+  function tick() {
+    data.shift();
+    data.push(Math.random() * 40 + 6);
+    render();
+  }
+
+  render();
+  setInterval(tick, 1200);
+
+  let total = 124500;
+  let today = 12450;
+  let conv  = 847;
+
+  const amountEl = document.getElementById('earnAmount');
+  const todayEl  = document.getElementById('todayVal');
+  const convEl   = document.getElementById('convVal');
+
+  function fmt(n){ return '₹' + n.toLocaleString('en-IN'); }
+
+  function updateAmounts(){
+    const add = Math.floor(Math.random() * 950) + 50;
+    total += add;
+    today += add;
+    conv  += Math.floor(Math.random() * 4) + 1;
+
+    amountEl.textContent = fmt(total);
+    todayEl.textContent  = '+' + fmt(today);
+    convEl.textContent   = conv.toLocaleString('en-IN');
+
+    amountEl.classList.add('flash');
+    setTimeout(() => amountEl.classList.remove('flash'), 300);
+  }
+
+  setInterval(updateAmounts, 2000);
+})();
+
+(function(){
+  const canvas = document.getElementById('snowCanvas');
+  const hero = document.getElementById('hero');
+  const ctx = canvas.getContext('2d');
+  let W, H;
+  let flakes = [];
+  const FLAKE_COUNT = 45;
+
+  function resize(){
+    const rect = hero.getBoundingClientRect();
+    W = canvas.width = rect.width;
+    H = canvas.height = rect.height;
+  }
+  window.addEventListener('resize', resize);
+  resize();
+
+  function makeFlake(randomY){
+    return {
+      x: Math.random() * W,
+      y: randomY ? Math.random() * H : -6,
+      r: Math.random() * 1.3 + 0.5,
+      speedY: Math.random() * 0.6 + 0.25,
+      speedX: Math.random() * 0.4 - 0.2,
+      drift: Math.random() * 0.02 + 0.005,
+      angle: Math.random() * Math.PI * 2,
+      opacity: Math.random() * 0.5 + 0.35
+    };
+  }
+
+  for (let i = 0; i < FLAKE_COUNT; i++) flakes.push(makeFlake(true));
+
+  function draw(){
+    ctx.clearRect(0, 0, W, H);
+    for (let f of flakes){
+      f.angle += f.drift;
+      f.x += f.speedX + Math.sin(f.angle) * 0.3;
+      f.y += f.speedY;
+
+      ctx.beginPath();
+      ctx.arc(f.x, f.y, f.r, 0, Math.PI * 2);
+      ctx.fillStyle = `rgba(135,206,250,${f.opacity})`;
+      ctx.shadowBlur = 4;
+      ctx.shadowColor = 'rgba(135,206,250,0.7)';
+      ctx.fill();
+
+      if (f.y > H + 6 || f.x < -6 || f.x > W + 6){
+        Object.assign(f, makeFlake(false));
+      }
+    }
+    requestAnimationFrame(draw);
+  }
+  draw();
+})();
+</script>
+</body>
+</html>
